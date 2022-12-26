@@ -1,0 +1,13 @@
+
+.blocInfo{
+    display: flex;
+    background-color: darkseagreen;
+    margin: 2px;
+}
+
+.blocInfoColonne{
+    display: flex;
+    flex-direction: column;
+    background-color: darkseagreen;
+    margin: 2px;
+}

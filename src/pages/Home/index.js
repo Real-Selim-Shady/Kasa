@@ -1,28 +1,12 @@
 import '../../styles/App.css';
 import LogementList from '../../components/ResidencesList';
-import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom"
 import '../../styles/Home.css'
 import ResidencePage from '../../components/ResidenceOverview';
-import Banner from '../../components/Header';
 
 function App() {
 
-  const [residences, updateResidences] = useState([])
 
-  useEffect(() => {
-
-    fetch(`data/data.json`)
-      .then((response) => {
-        console.log(response)
-      return response.json();
-      })
-      .then((data) => {
-        console.log(data)
-        updateResidences(data)
-      })
-      
-   }, [])
  
 
 
@@ -33,7 +17,7 @@ function App() {
         <Route path='/' element={
           <section className='appHome'>
           <div className='homeBackground'>
-            <LogementList residences={residences} updateResidences={updateResidences} />
+            <LogementList />
           </div>
         </section>
         }/>
@@ -41,7 +25,7 @@ function App() {
         <Route path='/ResidenceOverview/:id' element={
           <section className='appHome'>
           <div className='homeBackground'>
-            <ResidencePage residences={residences} updateResidences={updateResidences} />
+            <ResidencePage />
           </div>
         </section>
         }/>

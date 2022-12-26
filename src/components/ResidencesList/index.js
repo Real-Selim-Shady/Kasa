@@ -1,7 +1,25 @@
 import "../../styles/LogementList.css"
+import { useState, useEffect } from 'react';
 
 
-function LogementList({residences, updateResidences}){
+function LogementList(){
+
+
+  const [residences, updateResidences] = useState([])
+
+  useEffect(() => {
+
+    fetch(`data/data.json`)
+      .then((response) => {
+        console.log(response)
+      return response.json();
+      })
+      .then((data) => {
+        console.log(data)
+        updateResidences(data)
+      })
+      
+   }, [])
 
 
     return(
