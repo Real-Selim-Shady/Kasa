@@ -1,0 +1,11 @@
+.arrowColapse{
+    display: flex;
+    transform: rotate(180deg);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.arrowBloc{
+    align-self: center;
+    margin-right: 15px;
+}

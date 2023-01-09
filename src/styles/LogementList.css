@@ -1,5 +1,103 @@
 
-.LLBackground{
-    display: flex;
-    background-color: azure;
+@media only screen and (min-width: 820px) {
+
+    .LLBackground{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #F7F7F7;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+        color: blue;
+        text-decoration: none; /* no underline */
+    }
+
+    .coverCard{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border-radius: 5px;
+        /*background: linear-gradient(#FF6060, 80%, grey);*/
+        /*background: linear-gradient(#FF6060,95%, #4b4c52);*/
+        background: rgb(255,96,96);
+        background: linear-gradient(180deg, rgba(255,96,96,1) 44%, rgba(251,94,94,1) 46%, rgba(153,61,61,1) 90%);
+        padding: 5px;
+        margin: 5px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .coverCard:hover {
+        background: #FF6060;
+    }
+
+    .coverTitle{
+        color: #FFFFFF;
+        text-align: start;
+    }
+
+    .coverPic{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+    }
+
+}
+
+@media only screen and (max-width: 819px) {
+
+    .LLBackground{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: transparent;
+        justify-content: center;
+        padding-top: 2px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+        color: blue;
+        text-decoration: none; /* no underline */
+    }
+
+    .coverCard{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border-radius: 5px;
+        /*background: linear-gradient(#FF6060, 80%, grey);*/
+        /*background: linear-gradient(#FF6060,95%, #4b4c52);*/
+        background: rgb(255,96,96);
+        background: linear-gradient(180deg, rgba(255,96,96,1) 44%, rgba(251,94,94,1) 46%, rgba(153,61,61,1) 90%);
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .coverCard:hover {
+        background: #FF6060;
+    }
+
+    .coverTitle{
+        color: #FFFFFF;
+        text-align: start;
+    }
+
+    .coverPic{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+    }
+
 }

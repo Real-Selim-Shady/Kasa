@@ -1,33 +1,33 @@
 import "../../styles/LogementList.css"
 import { useState, useEffect } from 'react';
+import React from "react"
 
 
 function LogementList(){
 
+    const [residences, updateResidences] = useState([])
 
-  const [residences, updateResidences] = useState([])
+    useEffect(() => {
 
-  useEffect(() => {
-
-    fetch(`data/data.json`)
-      .then((response) => {
-        console.log(response)
-      return response.json();
-      })
-      .then((data) => {
-        console.log(data)
-        updateResidences(data)
-      })
-      
-   }, [])
-
+      fetch(`data/data.json`)
+        .then((response) => {
+          console.log(response)
+        return response.json();
+        })
+        .then((data) => {
+          console.log(data)
+          updateResidences(data)
+        })
+        
+    }, [])
 
     return(
         <div className="LLBackground">
           { residences.map((residence) =>
-              <div key={residence.id}>
+              <div key={residence.id} className="coverCard">
                 <a href={"/ResidenceOverview/"+residence.id}>
-                  <p>{residence.title}</p>
+                  <img src={residence.cover} className="coverPic" alt="photo_de couverture de l'habitat"/>
+                  <p className="coverTitle">{residence.title}</p>
                 </a>
               </div>   
           )
@@ -39,20 +39,3 @@ function LogementList(){
 }
 
 export default LogementList
-
-
-/*
-import { BrowserRouter as Router } from 'react-router-dom'
-const BoutonDeNavigation = ({ libelle, history }) => (
-  <button type="button" onClick={() => history.push('/ma-nouvelle-url')}>{libelle}</button>
-);
-const SomeComponent = () => (
-  <Route path="/" render={(props) => <BoutonDeNavigation {...props} title="Changer de page" />} />
-)
-const App = () => (
-  <Router>
-    <SomeComponent />
-    <AnotherComponent />
-  </Router>
-);
-*/

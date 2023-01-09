@@ -1,13 +1,271 @@
+.overviewContents {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    margin-top: 50px;
+}
+
+.control-dots{
+    display: none;
+}
+
+.thumbs{
+    display: none;
+}
+
+.title{
+    display: flex;
+    color: #FF6060;
+    padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: start;
+}
+
+.localisation{
+    display: flex;
+    color: #FF6060;
+    padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.tagsBloc {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tags {
+    display: flex;
+    color: #F6F6F6;
+    background-color: #FF6060;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 2%;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 5px;
+}
+
+.screenTop{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.screenMid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.screenMid1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    place-content: space-between;
+}
+.screenMid2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-end;
+    place-content: space-between;
+}
+
+.hostBloc {
+    display: flex;
+    align-items: center;
+}
+
+.hostName{
+    /*display: flex;
+    color: #FF6060;
+    padding-right: 100px;
+    align-self: start;
+    width: 93px;*/
+
+    width: 93px;
+    height: 52px;
+    left: 1170px;
+    top: 573px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    /* or 26px */
+
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    color: #FF6060;
+}
+
+.hostPicture{
+    border-radius: 50%;
+    width: 64px;
+    height: auto;
+    padding-left: 1%;
+}
+
+.rating{
+    display: flex;
+}
+
+
+.screenBottom{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    place-content: space-between;
+}
+
+.supraBloc{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blocTitle{
+    display: flex;
+    background-color: #FF6060;
+    color: #FFFFFF;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 1;
+    padding-left: 15px;
+    place-content: space-between;
+}
 
 .blocInfo{
     display: flex;
-    background-color: darkseagreen;
-    margin: 2px;
+    background-color:  #F6F6F6;;
+    color: #FF6060;
+    min-height: 180px;
+    margin-top: -5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
 }
 
-.blocInfoColonne{
+.blocInfoStuff{
     display: flex;
+    background-color:  #F6F6F6;;
+    color: #FF6060;
     flex-direction: column;
-    background-color: darkseagreen;
-    margin: 2px;
+    min-height: 180px;
+    margin-top: -5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    align-items: start;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 819px) {
+
+
+    .title{
+        font-size: 20px;
+    }
+
+    .localisation{
+        font-size: 15px;
+    }
+
+    .stars{
+        width: 18px;
+    }
+
+    .hostName{
+        font-size: 14px;
+        width: 50px;
+        height: auto;
+        place-content: center;
+        padding-right: 6px;
+    }
+
+    .hostPicture{
+        width: 45px;
+        margin-left: 5px;
+    }
+
+    .screenMid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .screenMid1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        place-content: space-between;
+    }
+    .screenMid2{
+        display: flex;
+        flex-direction:row-reverse;
+        width: 100%;
+        align-items: flex-end;
+        place-content: space-between;
+        align-items:center;
+        margin-top: 15px;
+    }
+
+    .screenBottom{
+        flex-direction: column;
+    }
+
+    .supraBloc{
+        width: 100%;
+    }
+
+    .blocTitle{
+        font-size: 13px;
+    }
+
+    .blocInfo{
+        min-height: 0px;
+        padding-top: 25px;
+        font-size: 13px;
+    }
+
+    .blocInfoStuff{
+        min-height: 0px;
+        padding-top: 25px;
+        font-size: 13px;
+    }
+
+
+    .tags {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 12px;
+    }
+
+
+    .arrowSize{
+        width: 20px;
+    }
+
+
+
 }

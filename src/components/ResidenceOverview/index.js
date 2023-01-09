@@ -1,7 +1,11 @@
 import "../../styles/FicheLogement.css"
 import "../../styles/App.css"
+import "../../styles/Colapse.css"
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react';
+import Slider from "../Slider"
+import Stars from "../Stars"
+import React from "react"
 
 
 
@@ -25,52 +29,87 @@ function ResidencePage(){
    }, [])
 
   const params = useParams();
-  //console.log(params.id);
 
-  /*const URLparams = new URLSearchParams(window.location.search);
-  const params2 = URLparams.get("residence2.id")
-  console.log(params2)*/
+  const Colapse = (e) => {
+
+    let parent = e.target.parentElement;
+    //let parentID = parent.id;
+
+    let grandParent = parent.parentElement;
+    //let grandParentID = grandParent.id;
+
+    let grandParent2 = grandParent.parentElement;
+    //let grandParent2ID = grandParent2.id;
+
+    let ancestor = grandParent2.parentElement;
+    //let ancestorID = ancestor.id
+
+    if (e.target.id === "opened") {
+      e.target.style.transform = "rotate(180deg)"; 
+      e.target.id = "closed";
+      ancestor.lastChild.style.display = "none"
+    } else {
+      e.target.id = "opened"
+      e.target.style.transform = "rotate(360deg)"; 
+      ancestor.lastChild.style.display = "flex"
+    }
+  }
+  
 
   return(
     <div className="App">
-      <p>section fiche de logement</p>
       { residences2.map((residence2) =>
-              /*<div key={residence2.id}>
-                <div>
-                  <p>{residence2.title}</p>
-                </div>
-              </div>   */
             (params.id === residence2.id) ? 
             (
-              <div  key = {residence2.id}>
-                <div className="blocInfo">HOST TO DO</div>
-                {/*<div className="blocInfoColonne">  {residence2.host.map((hostInfo)=>
-                    <div key={residence2.id}>{hostInfo}</div>
-                  )} 
-                </div>*/}
-                <div className="blocInfo">titre: {residence2.title}</div>
-                <div className="blocInfo">description: {residence2.description}</div>
-                <div className="blocInfo">rating: {residence2.rating}</div>
-                <div className="blocInfo">localisation: {residence2.location}</div>
-                <div className="blocInfoColonne">  
-                  <p>pictures:</p>
-                  {residence2.pictures.map((picture)=>
-                      <img key={residence2.id+picture} src={picture}></img>
-                    )} 
+              <div className="overviewContents" key = {residence2.id}>
+                <div className="screenTop">
+                  {<div className="sliderBloc">
+                    <Slider residences2={residences2} updateResidences2={updateResidences2} residence2={residence2} />
+                  </div>}
                 </div>
-                <div className="blocInfo">  
-                  <p>tags: </p>
-                  {residence2.tags.map((tag)=>
-                      <div key={residence2.id+tag}>{tag}</div>
-                    )} 
+                <div className="screenMid">
+                  <div className="screenMid1">
+                    <div className="title">{residence2.title}</div>
+                    <div className="localisation">{residence2.location}</div>
+                    <div className="tagsBloc">  
+                      {residence2.tags.map((tag)=>
+                          <div key={residence2.id+tag} className="tags">{tag}</div>
+                        )} 
+                    </div>
+                  </div>
+                  <div className="screenMid2">
+                    <div className="hostBloc">  
+                      <div className="hostName"> {residence2.host.name}</div>
+                      <img src={residence2.host.picture} className="hostPicture" alt="image_de l'hote"></img>
+                    </div>
+                    <div className="rating">
+                      <Stars residences2={residences2} updateResidences2={updateResidences2} residence2={residence2}/>
+                    </div>
+                  </div>
                 </div>
-                <div className="blocInfo">
-                  cover: 
-                  <img src={residence2.cover}></img>
-                </div>
-                <div className="blocInfoColonne">  {residence2.equipments.map((equipment)=>
-                    <div key={residence2.id+equipment}>{equipment}</div>
-                  )} 
+                <div className="screenBottom">
+                  <div className="supraBloc" id="ancestor">
+                    <div className="blocTitle" id="grandParent2">
+                      <p>Description</p>
+                      <div className="arrowBloc" id="grandParent">
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse}  id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                      </div>
+                    </div>
+                    <div className="blocInfo" id="cousin">{residence2.description}</div>
+                  </div>
+                  <div className="supraBloc" id="ancestor">  
+                    <div className="blocTitle" id="grandParent2">
+                      <p>Equipements</p>
+                      <div className="arrowBloc" id="grandParent">
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                      </div>
+                    </div>
+                    <div className="blocInfoStuff" id="cousin">
+                      {residence2.equipments.map((equipment)=>
+                          <div key={residence2.id+equipment}>{equipment}</div>
+                        )} 
+                    </div>
+                  </div>
                 </div>
               </div>
             ) :
@@ -83,27 +122,3 @@ function ResidencePage(){
 }
 
 export default ResidencePage
-
-
-/*
-import { BrowserRouter as Router } from 'react-router-dom'
-const BoutonDeNavigation = ({ libelle, history }) => (
-  <button type="button" onClick={() => history.push('/ma-nouvelle-url')}>{libelle}</button>
-);
-const SomeComponent = () => (
-  <Route path="/" render={(props) => <BoutonDeNavigation {...props} title="Changer de page" />} />
-)
-const App = () => (
-  <Router>
-    <SomeComponent />
-    <AnotherComponent />
-  </Router>
-);
-
-        <section className='appHome'>
-          {console.log("residenceOverview")}
-          <div className='homeBackground'>
-            <p>ResidenceOverview</p>
-          </div>
-        </section>
-*/

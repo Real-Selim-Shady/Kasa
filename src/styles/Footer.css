@@ -1,5 +1,28 @@
 
 .footerBackground {
-    height: 10%;
-    background-color: aqua;
+    background-color: black;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.footerLogo {
+    display: flex;
+    width: 122px;
+}
+
+.legal {
+    display: flex;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 819px) {
+    .footerBackground {
+        padding-bottom: 40px;
+        width: 100%;
+    }
 }
