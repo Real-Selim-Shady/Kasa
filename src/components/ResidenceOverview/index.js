@@ -45,12 +45,12 @@ function ResidencePage(){
     //let ancestorID = ancestor.id
 
     if (e.target.id === "opened") {
-      e.target.style.transform = "rotate(180deg)"; 
+      e.target.style.transform = "rotate(360deg)"; 
       e.target.id = "closed";
       ancestor.lastChild.style.display = "none"
     } else {
       e.target.id = "opened"
-      e.target.style.transform = "rotate(360deg)"; 
+      e.target.style.transform = "rotate(180deg)"; 
       ancestor.lastChild.style.display = "flex"
     }
   }
@@ -92,7 +92,7 @@ function ResidencePage(){
                     <div className="blocTitle" id="grandParent2">
                       <p>Description</p>
                       <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse}  id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse}  id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                       </div>
                     </div>
                     <div className="blocInfo" id="cousin">{residence2.description}</div>
@@ -101,7 +101,7 @@ function ResidencePage(){
                     <div className="blocTitle" id="grandParent2">
                       <p>Equipements</p>
                       <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse} id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                       </div>
                     </div>
                     <div className="blocInfoStuff" id="cousin">
@@ -122,3 +122,4 @@ function ResidencePage(){
 }
 
 export default ResidencePage
+

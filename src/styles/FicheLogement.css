@@ -153,7 +153,7 @@
 }
 
 .blocInfo{
-    display: flex;
+    display: none;
     background-color:  #F6F6F6;;
     color: #FF6060;
     min-height: 180px;
@@ -167,7 +167,7 @@
 }
 
 .blocInfoStuff{
-    display: flex;
+    display: none;
     background-color:  #F6F6F6;;
     color: #FF6060;
     flex-direction: column;
@@ -175,7 +175,7 @@
     margin-top: -5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    align-items: start;
+    align-items: flex-start;
     padding-left: 15px;
     padding-right: 15px;
     justify-content: center;

@@ -1,6 +1,6 @@
 .arrowColapse{
     display: flex;
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     background-color: transparent;
     border-color: transparent;
 }

@@ -17,7 +17,7 @@ function Stars({residence2 /*,residences2, updateResidences2*/}) {
         <div>
             {range.map((n)=>
                 n <= redStarsNumber ? 
-                (<img src="https://i.ibb.co/7JMQPzg/RedStar.png" className="stars" key={"RedStar"+n}></img>) : (<img src="https://i.ibb.co/nR7zpKR/GreyStar.png" className="stars" key={"GreyStar"+n}></img>)
+                (<img src="https://i.ibb.co/7JMQPzg/RedStar.png" className="stars" key={"RedStar"+n} alt="étoile rouge"></img>) : (<img src="https://i.ibb.co/nR7zpKR/GreyStar.png" className="stars" key={"GreyStar"+n} alt="étoile grise"></img>)
             )}
         </div>
     )

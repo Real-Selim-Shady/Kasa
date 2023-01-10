@@ -17,7 +17,7 @@
 }
 
 .blocInfoAPropos{
-    display: flex;
+    display: none;
     background-color:  #F6F6F6;;
     color: #FF6060;
     padding-top: 17px;

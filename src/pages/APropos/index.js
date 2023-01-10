@@ -18,13 +18,13 @@ function APropos () {
         //let ancestorID = ancestor.id
 
         if (e.target.id === "opened") {
-        e.target.style.transform = "rotate(180deg)"; 
+        e.target.style.transform = "rotate(360deg)"; 
         e.target.id = "closed";
         //if(ancestor.lastChild.style.display === "flex"){ancestor.lastChild.style.display = "none"}
         ancestor.lastChild.style.display = "none"
         } else {
         e.target.id = "opened"
-        e.target.style.transform = "rotate(360deg)"; 
+        e.target.style.transform = "rotate(180deg)"; 
         //if(ancestor.lastChild.style.display === "none"){ancestor.lastChild.style.display = "flex"}
         ancestor.lastChild.style.display = "flex"
         }
@@ -36,7 +36,7 @@ function APropos () {
                 <div className="blocTitle" id="grandParent2">
                     <p>Fiabilité</p>
                     <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                     </div>
                 </div>
                 <div className="blocInfoAPropos" id="cousin1">
@@ -47,7 +47,7 @@ function APropos () {
                 <div className="blocTitle" id="grandParent2">
                     <p>Respect</p>
                     <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                     </div>
                 </div>
                 <div className="blocInfoAPropos" id="cousin2">
@@ -58,7 +58,7 @@ function APropos () {
                 <div className="blocTitle" id="grandParent2">
                     <p>Service</p>
                     <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                     </div>
                 </div>
                 <div className="blocInfoAPropos" id="cousin3">
@@ -69,7 +69,7 @@ function APropos () {
                 <div className="blocTitle" id="grandParent2">
                     <p>Sécurité</p>
                     <div className="arrowBloc" id="grandParent">
-                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="opened" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
+                        <button className="arrowColapse" id="parent"><img onClick={Colapse2} id="closed" src="https://i.ibb.co/C9DVxRJ/arrow-Down.png" alt="fleche de bloc d'information" className="arrowSize"/></button>
                     </div>
                 </div>
                 <div className="blocInfoAPropos" id="cousin4">
