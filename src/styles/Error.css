@@ -1,52 +1,46 @@
-
-.errorBackground{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.errorBackground {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-
-.errorNumber{
-    color: #FF6060;
-    font-weight: bolder;
-    font-size: 288px;
-    margin-top: 50px;
+.errorNumber {
+  color: #ff6060;
+  font-weight: bolder;
+  font-size: 288px;
+  margin-top: 50px;
 }
 
-.errorMessage{
-    color: #FF6060;
-    font-size: 36px;
+.errorMessage {
+  color: #ff6060;
+  font-size: 36px;
 }
 
-.linkToHome{
-    color: #FF6060;
-    text-decoration: underline;
-    font-size: 18px;
-    margin-top: 100px;
+.linkToHome {
+  color: #ff6060;
+  text-decoration: underline;
+  font-size: 18px;
+  margin-top: 100px;
 }
-
 
 @media only screen and (max-width: 819px) {
+  .errorBackground {
+    margin-top: 170px;
+    margin-bottom: 160px;
+  }
 
-    .errorBackground{
-        margin-top: 170px;
-        margin-bottom: 160px;
-    }
+  .errorNumber {
+    font-size: 96px;
+  }
 
-    .errorNumber {
-        font-size: 96px;
-    }
+  .errorMessage {
+    font-size: 18px;
+  }
 
-    .errorMessage{
-        font-size: 18px;
-    }
-
-    .linkToHome{
-        font-size: 14px;
-        margin-top: 120px;
-    }
-
-
+  .linkToHome {
+    font-size: 14px;
+    margin-top: 120px;
+  }
 }

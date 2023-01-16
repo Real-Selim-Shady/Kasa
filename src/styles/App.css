@@ -3,9 +3,8 @@
     background-color: white;
     text-align: center;
   }
-  
-  
-  .appHome{
+
+  .appHome {
     display: flex;
     height: 80%;
     flex-direction: column;
@@ -13,9 +12,9 @@
     margin-right: 10%;
     align-items: center;
   }
-  
-  .appLL{
-    background-color: #F6F6F6;
+
+  .appLL {
+    background-color: #f6f6f6;
     margin: auto;
     border-radius: 5px;
     display: flex;
@@ -32,8 +31,7 @@
     text-align: center;
   }
 
-
-  .appHome{
+  .appHome {
     display: flex;
     height: 80%;
     flex-direction: column;
@@ -42,8 +40,8 @@
     align-items: center;
   }
 
-  .appLL{
-    background-color: #F6F6F6;
+  .appLL {
+    background-color: #f6f6f6;
     margin: auto;
     border-radius: 5px;
     display: flex;
@@ -60,8 +58,7 @@
     text-align: center;
   }
 
-
-  .appHome{
+  .appHome {
     display: flex;
     height: 80%;
     flex-direction: column;
@@ -70,8 +67,8 @@
     align-items: center;
   }
 
-  .appLL{
-    background-color: #F6F6F6;
+  .appLL {
+    background-color: #f6f6f6;
     margin: auto;
     border-radius: 5px;
     display: flex;

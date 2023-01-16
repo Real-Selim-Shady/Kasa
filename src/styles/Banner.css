@@ -1,106 +1,102 @@
-
 @media only screen and (min-width: 820px) {
+  .bannerElements {
+    height: 10%;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-family: "Montserrat", sans-serif;
+    width: 80%;
+    place-content: space-between;
+  }
 
-    
-    .bannerElements {
-        height: 10%;
-        display: flex;
-        margin-left: 10%;
-        margin-top: 2%;
-        font-family: 'Montserrat', sans-serif;
-        width: 80%;
-        place-content: space-between;
-    }
+  .logo {
+    display: flex;
+  }
 
-    .logo{
-        display: flex;
-    }
+  .linkHome {
+    display: flex;
+  }
 
-    .linkHome{
-        display: flex;
-    }
+  .linkHome:hover {
+    text-decoration: underline;
+  }
 
-    .linkHome:hover{
-        text-decoration: underline;
-    }
+  .linkAPropos {
+    display: flex;
+    margin-left: 70px;
+  }
 
-    .linkAPropos{
-        display: flex;
-        margin-left: 70px;
-    }
+  .linkText {
+    color: #ff6060;
+    font-size: 24px;
+  }
 
-    .linkText{
-        color: #FF6060;
-        font-size: 24px;
-    }
+  .linkAPropos:hover {
+    text-decoration: underline;
+  }
 
-    .linkAPropos:hover{
-        text-decoration: underline;
-    }
+  a {
+    text-decoration: none; /* no underline */
+  }
 
-    a{
-        text-decoration: none; /* no underline */
-    }
-
-    .linksBanner{
-        display: flex;
-        align-self: center;
-    }
+  .linksBanner {
+    display: flex;
+    align-self: center;
+  }
 }
 
-
 @media only screen and (max-width: 819px) {
-    .bannerBackground {
-        display: flex;
-        width: 330px;
-        place-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .bannerElements {
-        height: 10%;
-        display: flex;
-        margin-top: 2%;
-        font-family: 'Montserrat', sans-serif;
-        width: 330px;
-        place-content: space-between;
-    }
+  .bannerBackground {
+    display: flex;
+    width: 330px;
+    place-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bannerElements {
+    height: 10%;
+    display: flex;
+    margin-top: 2%;
+    font-family: "Montserrat", sans-serif;
+    width: 330px;
+    place-content: space-between;
+  }
 
-    .logo{
-        display: flex;
-        width: 145px;
-        height: 47px;
-    }
+  .logo {
+    display: flex;
+    width: 145px;
+    height: 47px;
+  }
 
-    .linkHome{
-        display: flex;
-    }
+  .linkHome {
+    display: flex;
+  }
 
-    .linkHome:hover{
-        text-decoration: underline;
-    }
+  .linkHome:hover {
+    text-decoration: underline;
+  }
 
-    .linkAPropos{
-        display: flex;
-        margin-left: 11px;
-    }
+  .linkAPropos {
+    display: flex;
+    margin-left: 11px;
+  }
 
-    .linkText{
-        color: #FF6060;
-        font-size: 13px;
-    }
+  .linkText {
+    color: #ff6060;
+    font-size: 13px;
+  }
 
-    .linkAPropos:hover{
-        text-decoration: underline;
-    }
+  .linkAPropos:hover {
+    text-decoration: underline;
+  }
 
-    a{
-        text-decoration: none; /* no underline */
-    }
+  a {
+    text-decoration: none; /* no underline */
+  }
 
-    .linksBanner{
-        display: flex;
-        align-self: center;
-        margin-top: 10px;
-    }
+  .linksBanner {
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+  }
 }
