@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
-import '../../styles/LogementList.css';
+import './ResidencesList.css';
 import React, { useState, useEffect } from 'react';
 
 function LogementList() {

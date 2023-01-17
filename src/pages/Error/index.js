@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/no-unescaped-entities */
-import '../../styles/Error.css';
+import './Error.css';
 import React from 'react';
 
 function Error() {
   return (
     <div className="errorBackground">
-      <div className="errorNumber">404</div>
-      <div className="errorMessage">
+      <div className="errorNumber" key="errorNumber">404</div>
+      <div className="errorMessage" key="errorMessage">
         Oups! La page que vous demandez n'existe pas
       </div>
-      <a href="/" className="linkToHome">
+      <a href="/" className="linkToHome" key="lala">
         Retournez sur la page d'accueil
       </a>
     </div>

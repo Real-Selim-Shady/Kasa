@@ -7,7 +7,7 @@
 import React from 'react';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from 'react';
-import '../../styles/Slider.css';
+import './Slider.css';
 
 function Slider({ residence2 /* , residences2, updateResidences2 */ }) {
   const [currentIndex, setCurrentIndex] = useState(0);

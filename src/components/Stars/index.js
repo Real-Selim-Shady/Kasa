@@ -3,7 +3,7 @@
 import React from 'react';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { useState} from 'react';
-import '../../styles/Stars.css';
+import './Stars.css';
 
 function Stars({ residence2 /* ,residences2, updateResidences2 */ }) {
   const redStarsNumber = residence2.rating;

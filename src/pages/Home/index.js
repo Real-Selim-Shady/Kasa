@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import LogementList from '../../components/ResidencesList';
 import APropos from '../APropos';
-import '../../styles/Home.css';
+import './Home.css';
 import ResidencePage from '../../components/ResidenceOverview';
 import Error from '../Error';
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/jsx-filename-extension */
-import '../../styles/Banner.css';
+import './Banner.css';
 import React from 'react';
 
 function Banner() {
