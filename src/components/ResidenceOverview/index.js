@@ -7,7 +7,7 @@
 import './ResidenceOverview.css';
 import '../../styles/App.css';
 import '../../styles/Colapse.css';
-import { /* Navigate, */ useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Slider from '../Slider';
 import Stars from '../Stars';
@@ -21,8 +21,13 @@ function ResidencePage() {
     fetch('../data/data.json')
       .then((response2) => response2.json())
       .then((data2) => {
-        console.log(data2);
         updateResidences2(data2);
+      })
+      .catch((error) => {
+        const { response2 } = error.response2.data2;
+        if (response2.statusText === 404) {
+          Navigate('/404/*');
+        }
       });
   }, []);
   const params = useParams();
@@ -148,7 +153,12 @@ function ResidencePage() {
     );
   }
   console.log('nooooo');
-  return (<div>Noo</div>);
+    <Navigate replace to="/*" />;
+    return (
+      <div>
+        <Navigate replace to="/*" />
+      </div>
+    );
 }
 
 /*
