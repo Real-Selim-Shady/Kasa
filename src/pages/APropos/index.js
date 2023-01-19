@@ -4,32 +4,22 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import './APropos.css';
-import '../../styles/Colapse.css';
 import React from 'react';
 
 function APropos() {
   const Colapse2 = (e) => {
     const parent = e.target.parentElement;
-    // let parentID = parent.id;
-
     const grandParent = parent.parentElement;
-    // let grandParentID = grandParent.id;
-
     const grandParent2 = grandParent.parentElement;
-    // let grandParent2ID = grandParent2.id;
-
     const ancestor = grandParent2.parentElement;
-    // let ancestorID = ancestor.id
 
     if (e.target.id === 'opened') {
       e.target.style.transform = 'rotate(360deg)';
       e.target.id = 'closed';
-      // if(ancestor.lastChild.style.display === "flex"){ancestor.lastChild.style.display = "none"}
       ancestor.lastChild.style.display = 'none';
     } else {
       e.target.id = 'opened';
       e.target.style.transform = 'rotate(180deg)';
-      // if(ancestor.lastChild.style.display === "none"){ancestor.lastChild.style.display = "flex"}
       ancestor.lastChild.style.display = 'flex';
     }
   };
