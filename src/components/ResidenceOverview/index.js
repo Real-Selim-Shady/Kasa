@@ -139,7 +139,7 @@ function ResidencePage() {
       </div>
     );
   }
-  if (residences2.length === 1) { return (<Navigate replace to="/*" />); }
+  if (residences2[0] === false) { return (<Navigate replace to="/*" />); }
   return (null);
 }
 
