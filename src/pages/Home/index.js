@@ -46,17 +46,6 @@ function App() {
         />
 
         <Route
-          path="/ResidenceOverview/ddd"
-          element={(
-            <section className="appHome">
-              <div className="homeBackground">
-                <Error />
-              </div>
-            </section>
-          )}
-        />
-
-        <Route
           path="/*"
           element={(
             <section className="appHome">
@@ -67,15 +56,6 @@ function App() {
 
         <Route
           path="/404/*"
-          element={(
-            <section className="appHome">
-              <Error />
-            </section>
-          )}
-        />
-
-        <Route
-          path="/*"
           element={(
             <section className="appHome">
               <Error />

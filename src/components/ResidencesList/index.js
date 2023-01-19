@@ -7,13 +7,8 @@ function LogementList() {
 
   useEffect(() => {
     fetch('data/data.json')
-      .then((response) => {
-        /* eslint no-console: "off" */
-        console.log(response);
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         updateResidences(data);
       });
   }, []);
